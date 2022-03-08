@@ -1,1 +1,3 @@
-console.log('shout')
+import initializeSite from "./site";
+
+initializeSite();
