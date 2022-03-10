@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Ubuntu', 'sans-serif';
+}
+
+body{
+    margin: 0px;
+    height: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 100%;
+}
+
+.header{
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("./images/header-background.jpg");
+    height: 9rem;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.header h1{
+    font-family: 'Ubuntu', 'sans-serif';
+    font-size: 80px;
+    color: #F0E68C;
+    font-style: italic;
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+
+nav button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    font-size: 2em;
+    color: #F0E68C;
+}
+
+.main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #051094;
+    background-image: url("images/Baratie.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home{
+    position: relative;
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 33em;
+    width: 884.5px;
+    margin-bottom: 20em;
+}
+
+.home-cover{
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.home h2{
+    text-align: center;
+    font-size: 3em;
+    color: #F0E68C;
+    margin-bottom: 0px;
+}
+
+.home .home-res-name{
+    margin-top: 10px;
+    font-size: 5em;
+    font-style: italic;
+}
+
+.home p{
+    margin-top: 6em;
+    text-align: center;
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+

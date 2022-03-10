@@ -23,17 +23,17 @@ function createNav() {
     const homeButton = document.createElement('button');
     homeButton.classList.add("nav-button");
     homeButton.textContent = "Home";
-    homeButton.addEventListener("click", loadHome());
+    homeButton.addEventListener("click", loadHome);
 
     const menuButton = document.createElement('button');
     menuButton.classList.add("nav-button");
     menuButton.textContent = "Menu";
-    menuButton.addEventListener("click", loadMenu());
+    menuButton.addEventListener("click", loadMenu);
 
     const aboutButton = document.createElement('button');
     aboutButton.classList.add("nav-button");
     aboutButton.textContent = "About Us";
-    aboutButton.addEventListener("click", loadAboutUs());
+    aboutButton.addEventListener("click", loadAboutUs);
 
     nav.appendChild(homeButton);
     nav.appendChild(menuButton);
@@ -42,6 +42,7 @@ function createNav() {
     return nav
 
 }
+
 
 function createMain() {
     const main = document.createElement("main");
@@ -52,7 +53,7 @@ function createMain() {
 
 function initializeSite() {
     const content = document.getElementById("content");
-  
+    
     content.appendChild(createHeader());
     content.appendChild(createMain());
   
