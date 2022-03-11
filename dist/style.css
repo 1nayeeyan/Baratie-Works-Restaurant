@@ -96,4 +96,52 @@ nav button {
     padding-right: 10%;
 }
 
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+    position: relative;
+    margin-top: 10em;
+    align-self: center;
+    height: 33em;
+    width: auto;
+    margin-bottom: 20em;
+}
 
+.about-zeff{
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.about-zeff img {
+    grid-area: 2 / 1 / 3 / 2; 
+    height: 400px;
+}
+
+.about-zeff p {
+    grid-area: 2 / 2 / 3 / 3;
+    color: white;
+}
+
+.about-sanji{
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.about-sanji img {
+    grid-area: 2 / 1 / 3 / 2; 
+    height: 400px;
+}
+
+.about-sanji p {
+    grid-area: 2 / 2 / 3 / 3;
+    color: white;
+}

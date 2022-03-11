@@ -2,6 +2,7 @@ import loadHome from "./home";
 import loadMenu from "./menu";
 import loadAboutUs from "./about";
 
+const content = document.getElementById("content");
 
 function createHeader() {
     const header = document.createElement("header");
@@ -23,17 +24,30 @@ function createNav() {
     const homeButton = document.createElement('button');
     homeButton.classList.add("nav-button");
     homeButton.textContent = "Home";
-    homeButton.addEventListener("click", loadHome);
+    homeButton.addEventListener("click", function(){
+        clearMain();
+        content.appendChild(createMain());
+        loadHome();
+        
+    });
 
     const menuButton = document.createElement('button');
     menuButton.classList.add("nav-button");
     menuButton.textContent = "Menu";
-    menuButton.addEventListener("click", loadMenu);
+    menuButton.addEventListener("click", function(){
+        clearMain();
+        content.appendChild(createMain());
+        loadMenu();
+    });
 
     const aboutButton = document.createElement('button');
     aboutButton.classList.add("nav-button");
     aboutButton.textContent = "About Us";
-    aboutButton.addEventListener("click", loadAboutUs);
+    aboutButton.addEventListener("click", function() {
+        clearMain();
+        content.appendChild(createMain());
+        loadAboutUs();
+    });
 
     nav.appendChild(homeButton);
     nav.appendChild(menuButton);
@@ -51,9 +65,13 @@ function createMain() {
     return main;
 }
 
+function clearMain(){
+    let content = document.getElementById("content");
+    let main = document.getElementById("main");
+    return content.removeChild(main);
+}
+
 function initializeSite() {
-    const content = document.getElementById("content");
-    
     content.appendChild(createHeader());
     content.appendChild(createMain());
   

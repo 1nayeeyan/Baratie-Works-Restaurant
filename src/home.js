@@ -6,15 +6,11 @@ function createHome(){
     const homeCover = document.createElement('div');
     homeCover.classList.add('home-cover');
 
-    const homeTitle1 = document.createElement("h2");
-    const homeTitle2 = document.createElement("h2");
-    homeTitle2.classList.add('home-res-name')
+    const homeTitle = createHeading("Baratie");
+    homeTitle.classList.add('home-res-name')
 
-    homeTitle1.textContent = "Welcome to";
-    homeTitle2.textContent = "Baratie";
-
-    homeCover.appendChild(homeTitle1);
-    homeCover.appendChild(homeTitle2);
+    homeCover.appendChild(createHeading("Welcome To"));
+    homeCover.appendChild(homeTitle);
     homeCover.appendChild(createParagraph("East Blue's very own restaurant on the sea. Our specialty lies in Seafood dishes, our chefs take inspiration from ingredients in the sea around us, your visit to the Baratie is bound to be one to remember."));
 
     home.appendChild(homeCover);
@@ -26,6 +22,12 @@ function createParagraph(text) {
     const paragraph = document.createElement("p");
     paragraph.textContent = text;
     return paragraph;
+}
+
+function createHeading(text) {
+    const heading = document.createElement("h2");
+    heading.textContent = text;
+    return heading;
 }
 
 
